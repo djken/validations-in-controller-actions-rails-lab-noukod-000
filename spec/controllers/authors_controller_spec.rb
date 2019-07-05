@@ -1,5 +1,5 @@
 require "rails_helper"
-type: :request
+
 RSpec.describe AuthorsController do
   let(:jeff) { Author.create!(name: "H. Jeff", email: "jeff@sbahj.info") }
   let(:jeff_found) { Author.find_by(email: jeff.email) }
@@ -46,5 +46,4 @@ RSpec.describe AuthorsController do
       expect(response).to render_template(:new)
     end
   end
-end
 end
